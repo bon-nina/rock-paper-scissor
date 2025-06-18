@@ -1,4 +1,7 @@
 
+//starts game 
+playGame();
+
 //gets randomized choice from computer
 function getComputerChoice () { 
     let randomNumber;
@@ -39,6 +42,10 @@ function playGame() {
         playRound(getHumanChoice(),getComputerChoice()); 
     }
 
+    //displays score at the end of five rounds
+    console.log("Your score: " + humanScore);
+    console.log("Opponent score: " + computerScore);
+
     //compares human and computer choice to decide winner
     function playRound (humanChoice,computerChoice) { 
 
@@ -67,5 +74,3 @@ function playGame() {
     } 
 
 }
-
-playGame();
