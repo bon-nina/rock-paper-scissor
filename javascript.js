@@ -1,9 +1,19 @@
 
 
 function getComputerChoice () {
+    let randomNumber;
     let choice;
-    choice = Math.random()*100;
-    choice = Math.round(choice);
+    randomNumber = Math.random()*100;
+    randomNumber = Math.round(randomNumber);
+    if ( randomNumber < 33 ){
+        choice = "Rock";
+    }
+    else if ( randomNumber >= 66 ) {
+        choice = "Scissor";
+    }
+    else {
+        choice ="Paper";
+    }
     return choice;
 }
 
@@ -12,4 +22,3 @@ function getHumanChoice () {
     choice = prompt("Enter your choice: Rock, Paper or Scissor: ");
     return choice;
 }
-
